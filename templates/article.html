@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block banner %}
+<section id="banner" class="article-page-banner">
+  <header>
+    <h2>{{ article.title }}</h2>
+  </header>
+</section>
+{% endblock banner %}
+
+
+{% block content %}
+<!-- Pre-Kids Tracks -->
+
+<div class="row">
+  <div class="12u">
+
+    <!-- Pre-event -->
+    <section id="pkt">
+      <div class="row">
+        <div class="12u">
+          <section class="box">
+            <p>
+            {{ article.content }}
+            </p>
+          </section>
+        </div>
+      </footer>
+    </section>
+  </div>
+</div>
+{% endblock content %}

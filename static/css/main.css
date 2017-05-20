@@ -1495,6 +1495,7 @@ ul.divided li:first-child {
 ul.social {
   overflow: hidden;
   cursor: default;
+  font-size: 9px;
 }
 
 ul.social li {
@@ -2549,4 +2550,13 @@ ol.default li {
 #organizers img {
   box-shadow: 2px 2px 4px rgba(0,0,0,.2);
   border: .1px solid rgba(0,0,0,.1);
+}
+
+.article-page-banner{
+  padding: 1em 0 !important;
+  margin: 0 !important;
+}
+
+.article-page-banner header h2{
+    margin: 0!important;
 }
