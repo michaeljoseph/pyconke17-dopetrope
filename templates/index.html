@@ -40,49 +40,23 @@
     <div class="12u 12u(mobile)">
       {{ DESCRIPTION }}
       <br><br>
-      <h3>Topics featuring in the event...</h3>
     </div>
   </div>
   <div class="row">
-    <div class="4u 12u(mobile)">
-      <section class="first">
-        <i class="icon featured fa-globe"></i>
-        <header>
-          <h2>Web, Music &amp; Animation</h2>
-        </header>
-        <p>
-          Pythonic web frameworks, scripting in animation with Blender
-          and coding music in Py with sonicpi. Plenty of talks and tutorials
-          on these to get you started.
-        </p>
-      </section>
+    <div class="12u 12u(mobile)">
+      <h3>Topics featuring in the event...</h3>
     </div>
-    <div class="4u 12u(mobile)">
-      <section class="middle">
-        <i class="icon featured alt fa-bar-chart-o"></i>
-        <header>
-          <h2>Data Science &amp; AI</h2>
-        </header>
-        <p>
-          Stats crunching with Pandas &amp; co. and ML with with tools like Tensorflow.
-          Come partake in some pythonic stats &amp; AI
-          (just don't let what you subsequently create become self aware).
-        </p>
-      </section>
-    </div>
-    <div class="4u 12u(mobile)">
-      <section class="last">
-        <i class="icon featured alt2 fa fa-microchip"></i>
-        <header>
-          <h2>Internet of Things</h2>
-        </header>
-        <p>
-          Python in my IoT? It's more likely than you think! Feauted at the conference
-          will be talks and presentations on (micro)python on assorted hardware
-          with example applications.
-        </p>
-      </section>
-    </div>
+    {% for icon, title, description in TOPICS %}
+      <div class="4u 12u(mobile)">
+        <section>
+          <i class="icon featured {{ icon }}"></i>
+          <header>
+            <h2>{{ title }}</h2>
+          </header>
+          <p>{{ description }}</p>
+        </section>
+      </div>
+    {% endfor %}
   </div>
   <footer>
     <ul class="actions">
