@@ -67,36 +67,23 @@
 {% endblock intro %}
 
 {% block content %}
-
     <!-- sponsors -->
     <section id="sponsors">
       <header class="major">
         <h2 class="icon fa-money"> Our awesome (and growing) grid of sponsors:-</h2>
       </header>
+
       <div class="row" id="tier1">
         <br>
+        {% for url, img, alt in SPONSORS %}
         <div class="4u 8u(mobile)">
           <section>
-            <a href="https://jumo.world" class="image featured" target="_blank">
-              <img src="images/jumo.png" alt="Jumo World">
+            <a href="{{ url }}" class="image featured" target="_blank">
+              <img src="{{ img }}" alt="{{ alt }}">
             </a>
           </section>
         </div>
-        <div class="4u 8u(mobile)">
-          <section>
-            <a href="https://usiu.ac.ke" class="image featured" target="_blank">
-              <img src="images/usiu.png" alt="Jumo World">
-            </a>
-          </section>
-        </div>
-        <div class="4u 8u(mobile)">
-          <section>
-            <a href="https://ona.io" class="image featured" target="_blank">
-              <img src="images/ona.png" alt="ONA">
-            </a>
-          </section>
-        </div>
-      </div>
+        {% endfor %}
       <!-- div class="row" id="tier2">
         <div class="3u 4u(mobile)">
           <section>
