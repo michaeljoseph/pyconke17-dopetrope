@@ -122,20 +122,15 @@
         <h2 class="icon fa-cogs"> And the folks behind this event :-</h2>
       </header>
       <div class="row">
+        {% for url, img, alt in ORGANIZERS %}
         <div class="6u 12u(mobile)">
           <section>
-            <a href="http://meetup.com/Python-Nairobi" class="image featured" target="_blank">
-              <img src="images/pynbo.jpg" alt="Python Nairobi">
+            <a href="{{ url }}" class="image featured" target="_blank">
+              <img src="{{ img }}" alt="{{ alt }}">
             </a>
           </section>
         </div>
-        <div class="6u 12u(mobile)">
-          <section>
-            <a href="http://tunapanda.org" class="image featured" target="_blank">
-              <img src="images/tunapanda.jpg" alt="Tunapanda Institute">
-            </a>
-          </section>
-        </div>
+        {% endfor %}
       </div>
     </section>
   </div>
